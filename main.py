@@ -1,3 +1,2 @@
 from utility.classes import QuickHasher
-
-print(QuickHasher.from_file("requirements.txt").file_hash)
+from utility.settings import MAX_BUFFER_SIZE
