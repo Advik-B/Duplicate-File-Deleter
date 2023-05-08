@@ -1,7 +1,6 @@
 from dataclasses import dataclass
 from xxhash import xxh64
 from os import path
-from .settings import MAX_BUFFER_SIZE
 
 @dataclass
 class QuickHasher:
@@ -9,7 +8,7 @@ class QuickHasher:
     file_hash: str
 
     @staticmethod
-    def from_file(file_path: str) -> 'QuickHasher':
+    def from_file(file_path: str, MAX_BUFFER_SIZE: int) -> 'QuickHasher':
         hasher = xxh64()
         file_size = path.getsize(file_path)
         if file_size <= MAX_BUFFER_SIZE:
@@ -26,7 +25,8 @@ class QuickHasher:
                 file_path,
                 hasher,
             ),
-            path=path.abspath(file_path)
+            path=path.abspath(file_path),
+            MAX_BUFFER_SIZE=MAX_BUFFER_SIZE,
         )
 
     @staticmethod
@@ -36,7 +36,7 @@ class QuickHasher:
             return hasher.hexdigest()
 
     @staticmethod
-    def __imperfect_fsize(file_path: str, hasher: xxh64) -> str:
+    def __imperfect_fsize(file_path: str, hasher: xxh64, MAX_BUFFER_SIZE) -> str:
         with open(file_path, 'rb') as file:
             hasher.update(file.read(MAX_BUFFER_SIZE))
             # Skip to the last part of the file and update the hasher with the last bit of data
