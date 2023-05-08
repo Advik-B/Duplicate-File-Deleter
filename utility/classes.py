@@ -22,7 +22,7 @@ class FileHash:
             )
 
         return FileHash(
-            file_hash=FileHash.__inperfect_fsize(
+            file_hash=FileHash.__imperfect_fsize(
                 file_path,
                 hasher,
             ),
@@ -36,7 +36,7 @@ class FileHash:
             return hasher.hexdigest()
 
     @staticmethod
-    def __inperfect_fsize(file_path: str, hasher: xxh64) -> str:
+    def __imperfect_fsize(file_path: str, hasher: xxh64) -> str:
         with open(file_path, 'rb') as file:
             hasher.update(file.read(MAX_BUFFER_SIZE))
             # Skip to the last part of the file and update the hasher with the last bit of data
