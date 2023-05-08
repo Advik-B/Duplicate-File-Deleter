@@ -4,25 +4,25 @@ from os import path
 from .settings import MAX_BUFFER_SIZE
 
 @dataclass
-class FileHash:
+class QuickHasher:
     path: str
     file_hash: str
 
     @staticmethod
-    def from_file(file_path: str) -> 'FileHash':
+    def from_file(file_path: str) -> 'QuickHasher':
         hasher = xxh64()
         file_size = path.getsize(file_path)
         if file_size <= MAX_BUFFER_SIZE:
-            return FileHash(
-                file_hash=FileHash.__perfect_fsize(
+            return QuickHasher(
+                file_hash=QuickHasher.__perfect_fsize(
                     file_path,
                     hasher,
                 ),
                 path=path.abspath(file_path)
             )
 
-        return FileHash(
-            file_hash=FileHash.__imperfect_fsize(
+        return QuickHasher(
+            file_hash=QuickHasher.__imperfect_fsize(
                 file_path,
                 hasher,
             ),
@@ -45,6 +45,6 @@ class FileHash:
             return hasher.hexdigest()
 
     def __eq__(self, __value: object) -> bool:
-        if isinstance(__value, FileHash):
+        if isinstance(__value, QuickHasher):
             return self.file_hash == __value.file_hash
         return False
