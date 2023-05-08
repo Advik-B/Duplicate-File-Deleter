@@ -26,3 +26,8 @@ class FileHash:
         with open(file_path, 'rb') as file:
             hasher.update(file.read())
             return hasher.hexdigest()
+
+    def __eq__(self, __value: object) -> bool:
+        if isinstance(__value, FileHash):
+            return self.file_hash == __value.file_hash
+        return False
