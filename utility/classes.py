@@ -15,11 +15,19 @@ class FileHash:
         if file_size <= MAX_BUFFER_SIZE:
             return FileHash(
                 file_hash=FileHash.__perfect_fsize(
-                    file_path=file_path,
-                    hasher=hasher,
+                    file_path,
+                    hasher,
                 ),
                 path=path.abspath(file_path)
             )
+
+        return FileHash(
+            file_hash=FileHash.__inperfect_fsize(
+                file_path,
+                hasher,
+            ),
+            path=path.abspath(file_path)
+        )
 
     @staticmethod
     def __perfect_fsize(file_path: str, hasher: xxh64) -> str:
