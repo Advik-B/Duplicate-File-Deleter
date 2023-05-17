@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="qss">
+    <file>interface.colours.css</file>
+  </qresource>
+</RCC>
