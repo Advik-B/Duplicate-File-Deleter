@@ -1,0 +1,90 @@
+/*
+Primary: #ffffff (RGB: 255, 255, 255)
+Background Colour: #2f3340 (RGB: 47, 51, 64)
+Primary Button: #5865f2 (RGB: 88, 101, 242)
+Secondary Button: #5e49ba (RGB: 94, 73, 186)
+Accent: #2f73c6 (RGB: 47, 115, 198)
+User Input Indicator: #4b5166 (RGB: 75, 81, 102)
+*/
+
+
+QWidget {
+    color: #ffffff;
+    background-color: #2f3340;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+
+QWidget:disabled {
+    font-style: italic;
+}
+
+
+QPushButton {
+    background-color: #5865f2;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+QPushButton:pressed {
+    background-color: #2f73c6;
+}
+
+.secondary-bg {
+    background-color: #5e49ba;
+}
+
+.secondary-fg {
+    color: #5e49ba;
+}
+
+
+QLineEdit, QTextEdit, QPlainTextEdit{
+    background-color: #4b5166;
+    color: #ffffff;
+    border-radius: 5px;
+    height: 30px;
+    padding: 3px;
+    border: 3px solid #5865f2;
+}
+
+QLineEdit:focus, QTextEdit:focus, QPlainTextEdit:focus {
+    border: 3px solid #ffffff;
+}
+
+QLineEdit:disabled, QTextEdit:disabled, QPlainTextEdit:disabled {
+    border: 3px solid #2f73c6;
+}
+
+QCommandLinkButton {
+    color: #ffffff;
+    background-color: #5e49ba;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+QCommandLinkButton:pressed {
+    background-color: #5865f2;
+}
+
+QCommandLinkButton:disabled {
+    background-color: #2f73c6;
+}
+
+/* Change the text in the QCommandLinkButton because it looks blue by default */
+QCommandLinkButton > QLabel {
+    color: #ffffff;
+}
+
+/* QCheckBox::indicator {
+    border: 1px solid #5865f2;
+    color: white;
+}
+
+QCheckBox::indicator:unchecked {
+    background-color: #4b5166;
+}
+QCheckBox::indicator:checked {
+    background-color: #5e49ba;
+} */
