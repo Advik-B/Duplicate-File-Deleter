@@ -30,12 +30,18 @@
           <property name="text">
            <string>Delete after original</string>
           </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
          </widget>
         </item>
         <item>
          <widget class="QRadioButton" name="unique_copy_radio">
           <property name="text">
            <string>Copy unique files to a seperate folder</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -97,7 +103,7 @@
            </widget>
           </item>
           <item row="1" column="0">
-           <widget class="QPushButton" name="pushButton_3">
+           <widget class="QPushButton" name="copy_logs_btn">
             <property name="text">
              <string>Copy Logs</string>
             </property>
@@ -245,14 +251,14 @@
    <item row="4" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout_4">
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="scan_btn">
        <property name="text">
         <string>Scan</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="exec_btn">
        <property name="text">
         <string>Execute Deleter</string>
        </property>
