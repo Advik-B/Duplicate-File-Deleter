@@ -196,8 +196,6 @@
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="stylesheets.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
