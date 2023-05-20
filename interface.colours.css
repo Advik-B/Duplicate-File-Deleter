@@ -46,11 +46,10 @@ QLineEdit, QTextEdit, QPlainTextEdit{
     border-radius: 5px;
     height: 30px;
     padding: 3px;
-    border: 3px solid #5865f2;
 }
 
 QLineEdit:focus, QTextEdit:focus, QPlainTextEdit:focus {
-    border: 3px solid #ffffff;
+    border: 3px solid #5865f2;
 }
 
 QLineEdit:disabled, QTextEdit:disabled, QPlainTextEdit:disabled {
@@ -88,3 +87,10 @@ QCheckBox::indicator:unchecked {
 QCheckBox::indicator:checked {
     background-color: #5e49ba;
 } */
+
+QToolButton {
+    background-color: #5865f2;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 3px;
+}
