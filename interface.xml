@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>623</width>
-    <height>852</height>
+    <width>537</width>
+    <height>357</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,295 +17,185 @@
    <double>1.000000000000000</double>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
-   <item row="5" column="0">
-    <layout class="QHBoxLayout" name="horizontalLayout_3">
-     <item>
-      <widget class="QCommandLinkButton" name="commandLinkButton">
-       <property name="text">
-        <string>CommandLinkButton</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCommandLinkButton" name="commandLinkButton_3">
-       <property name="text">
-        <string>CommandLinkButton</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCommandLinkButton" name="commandLinkButton_2">
-       <property name="text">
-        <string>CommandLinkButton</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="12" column="0">
-    <widget class="QAxWidget" name="axWidget"/>
-   </item>
-   <item row="13" column="0">
-    <widget class="QFontComboBox" name="fontComboBox"/>
-   </item>
-   <item row="8" column="0">
+   <item row="0" column="0">
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
-      <string>GroupBox</string>
+      <string>Scanner Options</string>
      </property>
      <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="0">
-       <widget class="QTabWidget" name="tabWidget">
-        <widget class="QWidget" name="tab">
-         <attribute name="title">
-          <string>Tab 1</string>
-         </attribute>
-         <layout class="QGridLayout" name="gridLayout_3">
-          <item row="0" column="0">
-           <widget class="QPushButton" name="pushButton_2">
+      <item row="2" column="0">
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="title">
+         <string>Hashing Algorithm</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <widget class="QComboBox" name="algo_selection">
+           <item>
             <property name="text">
-             <string>PushButton</string>
+             <string>xxh64</string>
             </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QStackedWidget" name="stackedWidget">
-            <property name="currentIndex">
-             <number>1</number>
+           </item>
+           <item>
+            <property name="text">
+             <string>F - xxh64</string>
             </property>
-            <widget class="QWidget" name="page">
-             <widget class="QPushButton" name="pushButton_4">
-              <property name="geometry">
-               <rect>
-                <x>210</x>
-                <y>100</y>
-                <width>75</width>
-                <height>24</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>PushButton 2</string>
-              </property>
-             </widget>
-            </widget>
-            <widget class="QWidget" name="page_2">
-             <widget class="QPushButton" name="pushButton_3">
-              <property name="geometry">
-               <rect>
-                <x>210</x>
-                <y>90</y>
-                <width>75</width>
-                <height>24</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>PushButton 1</string>
-              </property>
-             </widget>
-            </widget>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-        <widget class="QWidget" name="tab_2">
-         <attribute name="title">
-          <string>Tab 2</string>
-         </attribute>
-        </widget>
+           </item>
+           <item>
+            <property name="text">
+             <string>SHA256</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>SHA512</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>F - SHA256</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>F - SHA512</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>MD5</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>F - MD5</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string> Type</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QCheckBox" name="detection_aud">
+           <property name="text">
+            <string>Music and Audio</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="detection_vid">
+           <property name="text">
+            <string>Video</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="detection_img">
+           <property name="text">
+            <string>Images</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="detection_doc">
+           <property name="text">
+            <string>Documents</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="detection_all">
+           <property name="text">
+            <string>Everything</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+           <property name="tristate">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="input_folder_btn">
+        <property name="text">
+         <string>Browse</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLineEdit" name="input_folder_txt">
+        <property name="placeholderText">
+         <string>Folder to scan</string>
+        </property>
        </widget>
       </item>
      </layout>
     </widget>
    </item>
-   <item row="2" column="0">
-    <widget class="QPushButton" name="pushButton">
-     <property name="text">
-      <string>QPushButton</string>
+   <item row="1" column="0">
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>Deleter Options</string>
      </property>
-    </widget>
-   </item>
-   <item row="14" column="0">
-    <widget class="QSlider" name="horizontalSlider">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
-   </item>
-   <item row="9" column="0">
-    <widget class="QMdiArea" name="mdiArea">
-     <widget class="QWidget" name="subwindow">
-      <property name="windowTitle">
-       <string>Subwindow</string>
-      </property>
-      <widget class="QDial" name="dial">
-       <property name="geometry">
-        <rect>
-         <x>100</x>
-         <y>0</y>
-         <width>50</width>
-         <height>64</height>
-        </rect>
-       </property>
-      </widget>
-     </widget>
-    </widget>
-   </item>
-   <item row="0" column="0">
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>QLabel</string>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="0">
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QRadioButton" name="radioButton">
-       <property name="text">
-        <string>RadioButton</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="radioButton_3">
-       <property name="text">
-        <string>RadioButton</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="radioButton_2">
-       <property name="text">
-        <string>RadioButton</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="16" column="0">
-    <widget class="QKeySequenceEdit" name="keySequenceEdit"/>
-   </item>
-   <item row="2" column="2">
-    <widget class="QToolButton" name="toolButton">
-     <property name="text">
-      <string>...</string>
-     </property>
-    </widget>
-   </item>
-   <item row="17" column="0">
-    <widget class="QTextBrowser" name="textBrowser"/>
-   </item>
-   <item row="11" column="0" colspan="2">
-    <widget class="QDockWidget" name="dockWidget">
-     <widget class="QWidget" name="dockWidgetContents">
-      <widget class="QPlainTextEdit" name="plainTextEdit">
-       <property name="geometry">
-        <rect>
-         <x>190</x>
-         <y>0</y>
-         <width>104</width>
-         <height>71</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QDockWidget" name="dockWidget_2">
-       <property name="geometry">
-        <rect>
-         <x>60</x>
-         <y>0</y>
-         <width>120</width>
-         <height>80</height>
-        </rect>
-       </property>
-       <widget class="QWidget" name="dockWidgetContents_2"/>
-      </widget>
-      <widget class="QDockWidget" name="dockWidget_3">
-       <property name="geometry">
-        <rect>
-         <x>200</x>
-         <y>0</y>
-         <width>120</width>
-         <height>80</height>
-        </rect>
-       </property>
-       <widget class="QWidget" name="dockWidgetContents_3"/>
-      </widget>
-     </widget>
-    </widget>
-   </item>
-   <item row="4" column="0">
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <item>
-      <widget class="QCheckBox" name="checkBox_2">
-       <property name="text">
-        <string>CheckBox</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="checkBox">
-       <property name="text">
-        <string>CheckBox</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="checkBox_3">
-       <property name="text">
-        <string>CheckBox</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="9" column="2" rowspan="2">
-    <widget class="QScrollBar" name="verticalScrollBar">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-    </widget>
-   </item>
-   <item row="19" column="0">
-    <widget class="QLCDNumber" name="lcdNumber"/>
-   </item>
-   <item row="15" column="0">
-    <widget class="QScrollBar" name="horizontalScrollBar">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
-   </item>
-   <item row="18" column="0">
-    <widget class="QCalendarWidget" name="calendarWidget"/>
-   </item>
-   <item row="10" column="0">
-    <widget class="QDockWidget" name="dockWidget_4">
-     <widget class="QWidget" name="dockWidgetContents_4"/>
-    </widget>
-   </item>
-   <item row="8" column="2">
-    <widget class="QSlider" name="verticalSlider">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-    </widget>
-   </item>
-   <item row="20" column="0">
-    <widget class="QProgressBar" name="progressBar">
-     <property name="value">
-      <number>24</number>
-     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QRadioButton" name="remove_other_radio">
+          <property name="text">
+           <string>Delete after original</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="unique_copy_radio">
+          <property name="text">
+           <string>Copy unique files to a seperate folder</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLineEdit" name="unique_copy_txt">
+          <property name="placeholderText">
+           <string>Destination Folder</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="unique_copy_btn">
+          <property name="text">
+           <string>Browse</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
     </widget>
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>QAxWidget</class>
-   <extends>QWidget</extends>
-   <header>qaxwidget.h</header>
-  </customwidget>
- </customwidgets>
  <resources>
   <include location="stylesheets.qrc"/>
  </resources>
