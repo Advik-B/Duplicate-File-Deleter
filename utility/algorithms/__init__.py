@@ -1,0 +1,1 @@
+from .quickhasher import QuickHasher
