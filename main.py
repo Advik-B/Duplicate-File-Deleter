@@ -1,14 +1,11 @@
-from PyQt6 import QtGui
-
-from utility.algorithms import QuickHasher
-from utility.settings import MAX_BUFFER_SIZE
-from PyQt6.QtWidgets import QWidget, QApplication, QFrame, QPushButton
-from PyQt6.QtCore import QFileInfo, QDir, QThread, pyqtSignal
-from PyQt6.uic import loadUi
 from pathlib import Path
-from QtLogger import QtLogger
-from PyQt6.QtGui import QFont
 from sys import argv
+
+from PyQt6 import QtGui
+from PyQt6.QtGui import QFont
+from PyQt6.QtWidgets import QWidget, QApplication, QFrame, QPushButton
+from PyQt6.uic import loadUi
+from QtLogger import QtLogger
 
 
 class GUI(QWidget):
