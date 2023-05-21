@@ -1,6 +1,8 @@
 from dataclasses import dataclass
-from xxhash import xxh64
 from os import path
+
+from xxhash import xxh64
+
 
 @dataclass
 class QuickHasher:
