@@ -8,6 +8,7 @@ from PyQt6.uic import loadUi
 from pathlib import Path
 from QtLogger import QtLogger
 from PyQt6.QtGui import QFont
+from sys import argv
 
 
 class GUI(QWidget):
@@ -53,6 +54,6 @@ class GUI(QWidget):
 
 
 if __name__ == "__main__":
-    app = QApplication([])
+    app = QApplication(argv)
     gui = GUI()
     app.exec()
