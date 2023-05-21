@@ -43,11 +43,6 @@ class GUI(QWidget):
         self.logger.stop()
         super().closeEvent(a0)
 
-    def resizeEvent(self, a0: QtGui.QResizeEvent) -> None:
-        self.logger.debug(f"Resizing window to {a0.size()}")
-        super().resizeEvent(a0)
-
-
     def copyLogs(self):
         logs = self.logger.logger_view.toPlainText()
         clipboard = app.clipboard()
